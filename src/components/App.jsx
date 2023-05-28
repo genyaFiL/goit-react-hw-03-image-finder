@@ -1,16 +1,21 @@
+// import { Component } from 'react';
+// import { nanoid } from 'nanoid';
+import Searchbar from './Searchbar/Searchbar';
+// import ContactList from './ContactList/ContactList';
+// import Filter from './Filter/Filter';
+
 export const App = () => {
+  const onSubmit = false;
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+    <div>
+      <Searchbar onSubmit={onSubmit} />
+      {/* <ImageGallery>
+        <ImageGalleryItem />
+      </ImageGallery>
+      <Loader />
+      <Button />
+
+      <Modal /> */}
     </div>
   );
 };
