@@ -12,14 +12,13 @@ export class PixabayAPI {
   };
 
   q = null;
-  page = 1;
 
-  fetchPhotos() {
+  fetchPhotos(page) {
     return axios.get(`${this.#BASE_URL}?key=${this.#API_KEY}&`, {
       params: {
         q: this.q,
         ...this.#BASE_PARAMS,
-        page: this.page,
+        page,
       },
     });
   }
